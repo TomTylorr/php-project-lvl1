@@ -1,7 +1,14 @@
-name: hello-world
-on: push
+name: lint
+
+on:
+    push:
+        branches:
+            - '**'
+        tags:
+            - '**'
+
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: my-step
